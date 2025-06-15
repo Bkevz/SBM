@@ -61,40 +61,40 @@ export function SalesAnalytics() {
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                    <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
                     <div className="flex-1">
                       <div className="flex justify-between">
                         <span className="text-sm font-medium">Food</span>
                         <span className="text-sm text-muted-foreground">65%</span>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div className="bg-green-500 h-2 rounded-full" style={{ width: "65%" }}></div>
+                      <div className="w-full bg-muted rounded-full h-2">
+                        <div className="bg-primary h-2 rounded-full" style={{ width: "65%" }}></div>
                       </div>
                     </div>
                   </div>
 
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                    <div className="w-2 h-2 bg-accent rounded-full mr-2"></div>
                     <div className="flex-1">
                       <div className="flex justify-between">
                         <span className="text-sm font-medium">Beverages</span>
                         <span className="text-sm text-muted-foreground">20%</span>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div className="bg-blue-500 h-2 rounded-full" style={{ width: "20%" }}></div>
+                      <div className="w-full bg-muted rounded-full h-2">
+                        <div className="bg-accent h-2 rounded-full" style={{ width: "20%" }}></div>
                       </div>
                     </div>
                   </div>
 
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></div>
+                    <div className="w-2 h-2 bg-secondary rounded-full mr-2"></div>
                     <div className="flex-1">
                       <div className="flex justify-between">
                         <span className="text-sm font-medium">Household</span>
                         <span className="text-sm text-muted-foreground">15%</span>
                       </div>
-                      <div className="w-full bg-gray-200 rounded-full h-2">
-                        <div className="bg-yellow-500 h-2 rounded-full" style={{ width: "15%" }}></div>
+                      <div className="w-full bg-muted rounded-full h-2">
+                        <div className="bg-secondary h-2 rounded-full" style={{ width: "15%" }}></div>
                       </div>
                     </div>
                   </div>

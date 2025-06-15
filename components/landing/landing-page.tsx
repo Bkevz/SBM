@@ -241,42 +241,42 @@ export function LandingPage() {
 
   return (
     <>
-      <div className="min-h-screen bg-black text-white overflow-hidden relative">
+      <div className="min-h-screen bg-background text-foreground overflow-hidden relative">
         {/* Particles Background */}
         <div id="particles-js" className="fixed inset-0 z-0"></div>
         
         {/* Animated Background */}
         <div className="fixed inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20"></div>
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-3xl animate-spin" style={{animationDuration: '20s'}}></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-primary/20 to-accent/20"></div>
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl animate-spin" style={{animationDuration: '20s'}}></div>
         </div>
       
       {/* Header */}
-      <header className="relative z-50 border-b border-gray-800/30 backdrop-blur-xl bg-black/20">
+      <header className="relative z-50 border-b border-border/30 backdrop-blur-xl bg-background/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-3 sm:py-4">
             <div className="flex items-center space-x-2 sm:space-x-3">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-lg sm:rounded-xl flex items-center justify-center relative">
-                <BarChart3 className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-lg sm:rounded-xl blur opacity-50 animate-pulse"></div>
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-primary via-accent to-primary rounded-lg sm:rounded-xl flex items-center justify-center relative">
+                <BarChart3 className="h-4 w-4 sm:h-6 sm:w-6 text-primary-foreground" />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary rounded-lg sm:rounded-xl blur opacity-50 animate-pulse"></div>
               </div>
-              <span className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                 <span className="hidden sm:inline">Biashara Pro</span>
                 <span className="sm:hidden">Biashara</span>
               </span>
             </div>
             <nav className="hidden md:flex space-x-6 lg:space-x-8">
-              <a href="#features" className="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 text-sm lg:text-base">Features</a>
-              <a href="#demo" className="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 text-sm lg:text-base">Demo</a>
-              <a href="#pricing" className="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 text-sm lg:text-base">Pricing</a>
-              <a href="#contact" className="text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 text-sm lg:text-base">Contact</a>
+              <a href="#features" className="text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-105 text-sm lg:text-base">Features</a>
+              <a href="#demo" className="text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-105 text-sm lg:text-base">Demo</a>
+              <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-105 text-sm lg:text-base">Pricing</a>
+              <a href="#contact" className="text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-105 text-sm lg:text-base">Contact</a>
             </nav>
             <div className="flex items-center space-x-2 sm:space-x-4">
               <Button 
                 variant="ghost" 
-                className="hidden sm:flex text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-sm px-3 py-2"
+                className="hidden sm:flex text-muted-foreground hover:text-foreground hover:bg-accent/10 transition-all duration-300 text-sm px-3 py-2"
                 onClick={() => {
                   // Handle sign in - could navigate to login page or open modal
                   console.log('Sign In clicked')
@@ -286,7 +286,7 @@ export function LandingPage() {
                 Sign In
               </Button>
               <Button 
-                className="bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 hover:from-blue-600 hover:via-purple-600 hover:to-cyan-600 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-xs sm:text-sm px-3 sm:px-4 py-2"
+                className="bg-gradient-to-r from-primary via-accent to-primary hover:from-primary/80 hover:via-accent/80 hover:to-primary/80 text-primary-foreground border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-xs sm:text-sm px-3 sm:px-4 py-2"
                 onClick={() => {
                   // Handle get started - could scroll to signup form or navigate to registration
                   console.log('Get Started clicked')
@@ -299,7 +299,7 @@ export function LandingPage() {
               {/* Mobile menu button */}
               <button 
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden p-2 text-gray-300 hover:text-white transition-colors"
+                className="md:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="Toggle mobile menu"
               >
                 {isMobileMenuOpen ? (
@@ -317,13 +317,13 @@ export function LandingPage() {
           
           {/* Mobile Menu Overlay */}
           {isMobileMenuOpen && (
-            <div className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border-b border-gray-800/30 z-40">
+            <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border/30 z-40">
               <div className="px-4 py-6 space-y-4">
                 <nav className="space-y-4">
                   <a 
                     href="#features" 
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-gray-300 hover:text-white transition-all duration-300 text-base py-2"
+                    className="block text-muted-foreground hover:text-foreground transition-all duration-300 text-base py-2"
                   >
                     Features
                   </a>
@@ -349,10 +349,10 @@ export function LandingPage() {
                     Contact
                   </a>
                 </nav>
-                <div className="pt-4 border-t border-gray-800/50 space-y-3">
+                <div className="pt-4 border-t border-border/50 space-y-3">
                    <Button 
                      variant="ghost" 
-                     className="w-full text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 text-sm justify-start"
+                     className="w-full text-muted-foreground hover:text-foreground hover:bg-accent/10 transition-all duration-300 text-sm justify-start"
                      onClick={() => {
                        setIsMobileMenuOpen(false)
                        // Handle sign in - could navigate to login page or open modal
@@ -363,7 +363,7 @@ export function LandingPage() {
                      Sign In
                    </Button>
                    <Button 
-                     className="w-full bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 hover:from-blue-600 hover:via-purple-600 hover:to-cyan-600 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-sm"
+                     className="w-full bg-gradient-to-r from-primary via-accent to-primary hover:from-primary/80 hover:via-accent/80 hover:to-primary/80 text-primary-foreground border-0 shadow-lg hover:shadow-xl transition-all duration-300 text-sm"
                      onClick={() => {
                        setIsMobileMenuOpen(false)
                        // Handle get started - could scroll to signup form or navigate to registration
@@ -387,23 +387,23 @@ export function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
             {/* Left Content */}
             <div className="text-center lg:text-left fade-in order-2 lg:order-1">
-              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full text-blue-300 text-xs sm:text-sm font-medium mb-6 sm:mb-8 backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 rounded-full text-primary text-xs sm:text-sm font-medium mb-6 sm:mb-8 backdrop-blur-sm">
                 <Zap className="w-3 h-3 sm:w-4 sm:h-4" />
                 <span className="hidden sm:inline">Trusted by 10,000+ SMBs in Kenya</span>
                 <span className="sm:hidden">10,000+ SMBs Trust Us</span>
               </div>
               
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 sm:mb-8 leading-tight">
-                <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-foreground via-primary to-accent bg-clip-text text-transparent">
                   Transform Your
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                   Business Today
                 </span>
               </h1>
               
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 Complete business management solution for <span className="text-blue-400 font-semibold">small and medium businesses</span>. 
                 Streamline operations, boost sales, and grow faster with our <span className="text-purple-400 font-semibold">AI-powered platform</span>.
               </p>
@@ -412,54 +412,54 @@ export function LandingPage() {
               <div className="mb-6 sm:mb-8">
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-lg mx-auto lg:mx-0">
                   <div className="relative flex-1">
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
                     <input
                       type="email"
                       placeholder="Enter your email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full pl-9 sm:pl-10 pr-4 py-3 sm:py-3 text-sm sm:text-base bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 backdrop-blur-sm"
+                      className="w-full pl-9 sm:pl-10 pr-4 py-3 sm:py-3 text-sm sm:text-base bg-background/50 border border-border rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 backdrop-blur-sm"
                     />
                   </div>
-                  <Button className="px-6 sm:px-8 py-3 text-sm sm:text-base bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 hover:from-blue-600 hover:via-purple-600 hover:to-cyan-600 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-xl whitespace-nowrap">
+                  <Button className="px-6 sm:px-8 py-3 text-sm sm:text-base bg-gradient-to-r from-primary via-accent to-primary hover:from-primary/80 hover:via-accent/80 hover:to-primary/80 text-primary-foreground border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 rounded-xl whitespace-nowrap">
                     Get Started
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                   </Button>
                 </div>
-                <p className="text-xs sm:text-sm text-gray-400 mt-3 text-center lg:text-left">
+                <p className="text-xs sm:text-sm text-muted-foreground mt-3 text-center lg:text-left">
                   ✓ Free 30-day trial • ✓ No credit card required • ✓ Cancel anytime
                 </p>
               </div>
               
               {/* Benefit Highlights */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8">
-                <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 bg-gray-900/30 rounded-lg backdrop-blur-sm border border-gray-800">
-                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0" />
-                  <span className="text-xs sm:text-sm text-gray-300">M-Pesa Integration</span>
+                <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 bg-card/30 rounded-lg backdrop-blur-sm border border-border">
+                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
+                  <span className="text-xs sm:text-sm text-card-foreground">M-Pesa Integration</span>
                 </div>
-                <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 bg-gray-900/30 rounded-lg backdrop-blur-sm border border-gray-800">
-                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400 flex-shrink-0" />
-                  <span className="text-xs sm:text-sm text-gray-300">Real-time Analytics</span>
+                <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 bg-card/30 rounded-lg backdrop-blur-sm border border-border">
+                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0" />
+                  <span className="text-xs sm:text-sm text-card-foreground">Real-time Analytics</span>
                 </div>
-                <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 bg-gray-900/30 rounded-lg backdrop-blur-sm border border-gray-800">
-                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 flex-shrink-0" />
-                  <span className="text-xs sm:text-sm text-gray-300">Cloud Backup</span>
+                <div className="flex items-center gap-2 sm:gap-3 p-2 sm:p-3 bg-card/30 rounded-lg backdrop-blur-sm border border-border">
+                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
+                  <span className="text-xs sm:text-sm text-card-foreground">Cloud Backup</span>
                 </div>
               </div>
               
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-gray-800/50">
+              <div className="grid grid-cols-3 gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-border/50">
                 <div className="text-center lg:text-left">
-                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-400 mb-1 font-mono">10K+</div>
-                  <div className="text-xs sm:text-sm text-gray-400">Active Users</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1 font-mono">10K+</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Active Users</div>
                 </div>
                 <div className="text-center lg:text-left">
-                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-purple-400 mb-1 font-mono">99.9%</div>
-                  <div className="text-xs sm:text-sm text-gray-400">Uptime</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-accent mb-1 font-mono">99.9%</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Uptime</div>
                 </div>
                 <div className="text-center lg:text-left">
-                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-cyan-400 mb-1 font-mono">24/7</div>
-                  <div className="text-xs sm:text-sm text-gray-400">Support</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-1 font-mono">24/7</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Support</div>
                 </div>
               </div>
             </div>

@@ -149,7 +149,7 @@ export function SubscriptionBilling() {
           <Card key={plan.id} className={`relative ${plan.popular ? "border-green-500 shadow-lg" : ""}`}>
             {plan.popular && (
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <Badge className="bg-green-500 text-white">
+                <Badge className="bg-primary text-primary-foreground">
                   <Star className="h-3 w-3 mr-1" />
                   Most Popular
                 </Badge>
@@ -158,9 +158,9 @@ export function SubscriptionBilling() {
 
             <CardHeader>
               <div className="flex items-center space-x-2">
-                {plan.id === "starter" && <Zap className="h-5 w-5 text-blue-500" />}
-                {plan.id === "business" && <Crown className="h-5 w-5 text-green-500" />}
-                {plan.id === "enterprise" && <Star className="h-5 w-5 text-purple-500" />}
+                {plan.id === "starter" && <Zap className="h-5 w-5 text-accent" />}
+                {plan.id === "business" && <Crown className="h-5 w-5 text-primary" />}
+                {plan.id === "enterprise" && <Star className="h-5 w-5 text-secondary" />}
                 <CardTitle>{plan.name}</CardTitle>
               </div>
               <div className="space-y-2">
@@ -176,7 +176,7 @@ export function SubscriptionBilling() {
               <div className="space-y-2">
                 {plan.features.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-2">
-                    <Check className="h-4 w-4 text-green-500" />
+                    <Check className="h-4 w-4 text-primary" />
                     <span className="text-sm">{feature}</span>
                   </div>
                 ))}
@@ -225,8 +225,8 @@ export function SubscriptionBilling() {
           <div className="space-y-4">
             <div className="flex items-center justify-between p-4 border rounded-lg">
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-green-100 rounded flex items-center justify-center">
-                  <span className="text-green-600 font-bold text-sm">MP</span>
+                <div className="w-8 h-8 bg-primary/10 rounded flex items-center justify-center">
+                <span className="text-primary font-bold text-sm">MP</span>
                 </div>
                 <div>
                   <p className="font-medium">M-Pesa</p>

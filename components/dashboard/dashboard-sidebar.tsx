@@ -83,7 +83,7 @@ export function DashboardSidebar() {
     <Sidebar>
       <SidebarHeader>
         <div className="flex items-center space-x-2 px-2">
-          <Store className="h-8 w-8 text-green-600" />
+          <Store className="h-8 w-8 text-primary" />
           <span className="text-xl font-bold">Biashara Pro</span>
         </div>
       </SidebarHeader>

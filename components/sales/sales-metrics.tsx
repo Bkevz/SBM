@@ -11,7 +11,7 @@ export function SalesMetrics() {
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">KSh 127,450</div>
-          <div className="flex items-center text-xs text-green-600">
+          <div className="flex items-center text-xs text-primary">
             <TrendingUp className="h-3 w-3 mr-1" />
             +12.5% from last month
           </div>
@@ -25,7 +25,7 @@ export function SalesMetrics() {
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">342</div>
-          <div className="flex items-center text-xs text-green-600">
+          <div className="flex items-center text-xs text-primary">
             <TrendingUp className="h-3 w-3 mr-1" />
             +8.2% from last month
           </div>
@@ -39,7 +39,7 @@ export function SalesMetrics() {
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">KSh 1,245</div>
-          <div className="flex items-center text-xs text-red-600">
+          <div className="flex items-center text-xs text-destructive">
             <TrendingDown className="h-3 w-3 mr-1" />
             -2.1% from last month
           </div>
@@ -53,7 +53,7 @@ export function SalesMetrics() {
         </CardHeader>
         <CardContent>
           <div className="text-2xl font-bold">89</div>
-          <div className="flex items-center text-xs text-green-600">
+          <div className="flex items-center text-xs text-primary">
             <TrendingUp className="h-3 w-3 mr-1" />
             +15.3% from last month
           </div>

@@ -51,7 +51,7 @@ export function TopProducts() {
           {topProducts.map((product, index) => (
             <div key={index} className="flex items-center justify-between p-4 border rounded-lg">
               <div className="flex items-center space-x-4">
-                <div className="flex items-center justify-center w-8 h-8 bg-green-100 text-green-600 rounded-full text-sm font-medium">
+                <div className="flex items-center justify-center w-8 h-8 bg-primary/10 text-primary rounded-full text-sm font-medium">
                   {index + 1}
                 </div>
                 <div>
@@ -65,7 +65,7 @@ export function TopProducts() {
                   <div className="text-sm font-medium">{product.sales} units sold</div>
                   <div className="text-sm text-muted-foreground">KSh {product.revenue.toLocaleString()}</div>
                 </div>
-                <Badge variant="secondary" className="text-green-600">
+                <Badge variant="secondary" className="text-primary">
                   {product.trend}
                 </Badge>
               </div>

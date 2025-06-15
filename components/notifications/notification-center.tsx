@@ -62,13 +62,13 @@ export function NotificationCenter() {
   const getIcon = (type: string) => {
     switch (type) {
       case "low_stock":
-        return <AlertTriangle className="h-4 w-4 text-orange-500" />
+        return <AlertTriangle className="h-4 w-4 text-destructive" />
       case "payment":
-        return <CheckCircle className="h-4 w-4 text-green-500" />
+        return <CheckCircle className="h-4 w-4 text-primary" />
       case "role_invite":
-        return <Info className="h-4 w-4 text-blue-500" />
+        return <Info className="h-4 w-4 text-accent" />
       default:
-        return <Bell className="h-4 w-4 text-gray-500" />
+        return <Bell className="h-4 w-4 text-muted-foreground" />
     }
   }
 
@@ -130,7 +130,7 @@ export function NotificationCenter() {
               <div
                 key={notification.id}
                 className={`flex items-start space-x-3 p-3 rounded-lg border ${
-                  !notification.read ? "bg-blue-50 border-blue-200" : "bg-gray-50"
+                  !notification.read ? "bg-accent/10 border-accent/30" : "bg-muted/50"
                 }`}
               >
                 <div className="flex-shrink-0 mt-1">{getIcon(notification.type)}</div>

@@ -98,7 +98,7 @@ export function ReceiptDialog({ payment, open, onOpenChange }: ReceiptDialogProp
             {/* Business Header */}
             <div className="text-center mb-6">
               <div className="flex justify-center mb-2">
-                <Building className="h-8 w-8 text-green-600" />
+                <Building className="h-8 w-8 text-primary" />
               </div>
               <h2 className="text-xl font-bold">{businessInfo.name}</h2>
               <div className="text-sm text-muted-foreground space-y-1">

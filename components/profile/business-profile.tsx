@@ -63,8 +63,8 @@ export function BusinessProfile() {
         </CardHeader>
         <CardContent>
           <div className="flex items-center space-x-4">
-            <div className="w-24 h-24 bg-gray-100 rounded-lg flex items-center justify-center">
-              <Building className="h-8 w-8 text-gray-400" />
+            <div className="w-24 h-24 bg-muted rounded-lg flex items-center justify-center">
+              <Building className="h-8 w-8 text-muted-foreground" />
             </div>
             <div>
               <Button variant="outline">
