@@ -186,6 +186,11 @@ export function LandingPage() {
         to { opacity: 1; transform: scale(1); }
       }
       
+      @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      
       .fade-in {
         animation: fade-in 0.8s ease-out forwards;
       }
@@ -196,6 +201,10 @@ export function LandingPage() {
       
       .slide-right {
         animation: slide-right 0.8s ease-out forwards;
+      }
+      
+      .animate-scroll {
+        animation: scroll 30s linear infinite;
       }
       
       .slide-up {
@@ -505,6 +514,183 @@ export function LandingPage() {
                 <div className="absolute top-1/2 -right-8 sm:-right-12 md:-right-16 glass-card rounded-lg sm:rounded-xl p-2 sm:p-3 hover:scale-105 transition-all duration-300" style={{animation: 'float 3s ease-in-out infinite', animationDelay: '2s'}}>
                   <div className="font-mono text-xs text-cyan-400">KSh 45,230</div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Company Partners Section */}
+      <section className="relative z-10 py-12 px-4 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">
+              Trusted by <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Leading Companies</span>
+            </h2>
+            <p className="text-xl text-gray-300">Powering businesses across Kenya</p>
+          </div>
+          
+          {/* Animated Logo Carousel */}
+          <div className="relative">
+            <div className="flex animate-scroll space-x-12 items-center">
+              {/* Microsoft Logo */}
+              <div className="flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <svg width="120" height="40" viewBox="0 0 120 40" className="fill-current text-gray-400">
+                  <rect x="0" y="0" width="18" height="18" fill="#F25022"/>
+                  <rect x="20" y="0" width="18" height="18" fill="#7FBA00"/>
+                  <rect x="0" y="20" width="18" height="18" fill="#00A4EF"/>
+                  <rect x="20" y="20" width="18" height="18" fill="#FFB900"/>
+                  <text x="45" y="25" className="fill-current text-gray-400" fontSize="16" fontFamily="Segoe UI, sans-serif" fontWeight="400">Microsoft</text>
+                </svg>
+              </div>
+              
+              {/* Google Logo */}
+              <div className="flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <svg width="100" height="40" viewBox="0 0 100 40" className="fill-current text-gray-400">
+                  <text x="0" y="25" fontSize="18" fontFamily="Product Sans, sans-serif" fontWeight="400">
+                    <tspan fill="#4285F4">G</tspan>
+                    <tspan fill="#EA4335">o</tspan>
+                    <tspan fill="#FBBC05">o</tspan>
+                    <tspan fill="#4285F4">g</tspan>
+                    <tspan fill="#34A853">l</tspan>
+                    <tspan fill="#EA4335">e</tspan>
+                  </text>
+                </svg>
+              </div>
+              
+              {/* Safaricom Logo */}
+              <div className="flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <svg width="120" height="40" viewBox="0 0 120 40" className="fill-current text-gray-400">
+                  {/* Authentic Safaricom Logo */}
+                  <defs>
+                    <linearGradient id="safaricomGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#00A651"/>
+                      <stop offset="100%" stopColor="#007A3D"/>
+                    </linearGradient>
+                  </defs>
+                  {/* Safaricom symbol - stylized 'S' with signal waves */}
+                  <g transform="translate(5, 8)">
+                    <path d="M8 2 C12 2, 16 6, 16 10 C16 14, 12 18, 8 18 C6 18, 4 16, 4 14 C4 12, 6 10, 8 10 C10 10, 12 12, 12 14" 
+                          fill="none" stroke="url(#safaricomGradient)" strokeWidth="2" strokeLinecap="round"/>
+                    <circle cx="8" cy="14" r="1.5" fill="url(#safaricomGradient)"/>
+                    {/* Signal waves */}
+                    <path d="M18 8 Q20 10, 18 12" fill="none" stroke="url(#safaricomGradient)" strokeWidth="1.5" strokeLinecap="round"/>
+                    <path d="M20 6 Q23 10, 20 14" fill="none" stroke="url(#safaricomGradient)" strokeWidth="1.5" strokeLinecap="round"/>
+                  </g>
+                  <text x="40" y="25" className="fill-current text-gray-400" fontSize="14" fontFamily="Arial, sans-serif" fontWeight="bold">Safaricom</text>
+                </svg>
+              </div>
+              
+              {/* Stripe Logo */}
+              <div className="flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <svg width="80" height="40" viewBox="0 0 80 40" className="fill-current text-gray-400">
+                  {/* Authentic Stripe Logo */}
+                  <g transform="translate(8, 12)">
+                    <path d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.274 15.705 0 12.626 0 9.33 0 6.686 1.235 5.016 3.196 3.347 5.157 2.473 7.764 2.473 10.817c0 4.267 2.31 7.124 6.919 8.471 2.227.806 3.356 1.426 3.356 2.409 0 .831-.683 1.305-1.901 1.305-2.227 0-4.515-.858-6.09-1.631L3.868 26.865C5.117 27.591 7.664 28 10.743 28c3.296 0 5.94-1.235 7.609-3.196 1.669-1.961 2.543-4.568 2.543-7.621-.001-4.267-2.312-7.124-6.919-8.471z" fill="#635BFF"/>
+                  </g>
+                  <text x="30" y="25" className="fill-current text-gray-400" fontSize="12" fontFamily="-apple-system, BlinkMacSystemFont, sans-serif" fontWeight="500">Stripe</text>
+                </svg>
+              </div>
+              
+              {/* AWS Logo */}
+              <div className="flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <svg width="80" height="40" viewBox="0 0 80 40" className="fill-current text-gray-400">
+                  {/* Authentic AWS Logo */}
+                  <g transform="translate(5, 8)">
+                    {/* AWS text */}
+                    <text x="0" y="16" fontSize="14" fontFamily="Amazon Ember, Arial, sans-serif" fontWeight="bold" fill="#232F3E">AWS</text>
+                    {/* Orange smile arrow */}
+                    <path d="M0 20 Q15 25, 30 20" fill="none" stroke="#FF9900" strokeWidth="2" strokeLinecap="round"/>
+                    <path d="M26 18 L30 20 L26 22" fill="#FF9900" stroke="#FF9900" strokeWidth="1"/>
+                  </g>
+                </svg>
+              </div>
+              
+              {/* Shopify Logo */}
+              <div className="flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <svg width="100" height="40" viewBox="0 0 100 40" className="fill-current text-gray-400">
+                  {/* Authentic Shopify Logo */}
+                  <g transform="translate(5, 8)">
+                    {/* Shopping bag shape */}
+                    <path d="M8 6 C8 4, 10 2, 12 2 C14 2, 16 4, 16 6 L16 8 L18 8 C19 8, 20 9, 20 10 L20 20 C20 21, 19 22, 18 22 L6 22 C5 22, 4 21, 4 20 L4 10 C4 9, 5 8, 6 8 L8 8 Z" fill="#95BF47"/>
+                    {/* Handle */}
+                    <path d="M8 6 C8 4, 10 2, 12 2 C14 2, 16 4, 16 6" fill="none" stroke="#95BF47" strokeWidth="1.5"/>
+                    {/* Shopify 'S' symbol */}
+                    <path d="M10 12 C11 11, 13 11, 14 12 C14 13, 13 14, 12 14 C11 14, 10 13, 10 12 Z" fill="white"/>
+                  </g>
+                  <text x="30" y="25" className="fill-current text-gray-400" fontSize="12" fontFamily="-apple-system, BlinkMacSystemFont, sans-serif" fontWeight="600">Shopify</text>
+                </svg>
+              </div>
+              
+              {/* PayPal Logo */}
+              <div className="flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <svg width="90" height="40" viewBox="0 0 90 40" className="fill-current text-gray-400">
+                  {/* Authentic PayPal Logo */}
+                  <g transform="translate(5, 8)">
+                    {/* First P - Dark Blue */}
+                    <path d="M2 4 L2 20 L6 20 L6 14 L10 14 C12 14, 14 12, 14 10 L14 8 C14 6, 12 4, 10 4 Z M6 8 L10 8 C10 8, 10 10, 10 10 L6 10 Z" fill="#003087"/>
+                    {/* Second P - Light Blue */}
+                    <path d="M8 4 L8 20 L12 20 L12 14 L16 14 C18 14, 20 12, 20 10 L20 8 C20 6, 18 4, 16 4 Z M12 8 L16 8 C16 8, 16 10, 16 10 L12 10 Z" fill="#009CDE"/>
+                  </g>
+                  <text x="30" y="25" className="fill-current text-gray-400" fontSize="12" fontFamily="-apple-system, BlinkMacSystemFont, sans-serif" fontWeight="600">PayPal</text>
+                </svg>
+              </div>
+              
+              {/* Slack Logo */}
+              <div className="flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <svg width="80" height="40" viewBox="0 0 80 40" className="fill-current text-gray-400">
+                  <rect x="10" y="10" width="6" height="6" rx="3" fill="#E01E5A"/>
+                  <rect x="18" y="10" width="6" height="6" rx="3" fill="#36C5F0"/>
+                  <rect x="10" y="18" width="6" height="6" rx="3" fill="#2EB67D"/>
+                  <rect x="18" y="18" width="6" height="6" rx="3" fill="#ECB22E"/>
+                  <text x="30" y="25" className="fill-current text-gray-400" fontSize="12" fontFamily="Arial, sans-serif" fontWeight="500">Slack</text>
+                </svg>
+              </div>
+              
+              {/* Duplicate logos for seamless loop */}
+              <div className="flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <svg width="120" height="40" viewBox="0 0 120 40" className="fill-current text-gray-400">
+                  <rect x="0" y="0" width="18" height="18" fill="#F25022"/>
+                  <rect x="20" y="0" width="18" height="18" fill="#7FBA00"/>
+                  <rect x="0" y="20" width="18" height="18" fill="#00A4EF"/>
+                  <rect x="20" y="20" width="18" height="18" fill="#FFB900"/>
+                  <text x="45" y="25" className="fill-current text-gray-400" fontSize="16" fontFamily="Segoe UI, sans-serif" fontWeight="400">Microsoft</text>
+                </svg>
+              </div>
+              
+              <div className="flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <svg width="100" height="40" viewBox="0 0 100 40" className="fill-current text-gray-400">
+                  <text x="0" y="25" fontSize="18" fontFamily="Product Sans, sans-serif" fontWeight="400">
+                    <tspan fill="#4285F4">G</tspan>
+                    <tspan fill="#EA4335">o</tspan>
+                    <tspan fill="#FBBC05">o</tspan>
+                    <tspan fill="#4285F4">g</tspan>
+                    <tspan fill="#34A853">l</tspan>
+                    <tspan fill="#EA4335">e</tspan>
+                  </text>
+                </svg>
+              </div>
+              
+              <div className="flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <svg width="120" height="40" viewBox="0 0 120 40" className="fill-current text-gray-400">
+                  {/* Authentic Safaricom Logo - Duplicate */}
+                  <defs>
+                    <linearGradient id="safaricomGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#00A651"/>
+                      <stop offset="100%" stopColor="#007A3D"/>
+                    </linearGradient>
+                  </defs>
+                  {/* Safaricom symbol - stylized 'S' with signal waves */}
+                  <g transform="translate(5, 8)">
+                    <path d="M8 2 C12 2, 16 6, 16 10 C16 14, 12 18, 8 18 C6 18, 4 16, 4 14 C4 12, 6 10, 8 10 C10 10, 12 12, 12 14" 
+                          fill="none" stroke="url(#safaricomGradient2)" strokeWidth="2" strokeLinecap="round"/>
+                    <circle cx="8" cy="14" r="1.5" fill="url(#safaricomGradient2)"/>
+                    {/* Signal waves */}
+                    <path d="M18 8 Q20 10, 18 12" fill="none" stroke="url(#safaricomGradient2)" strokeWidth="1.5" strokeLinecap="round"/>
+                    <path d="M20 6 Q23 10, 20 14" fill="none" stroke="url(#safaricomGradient2)" strokeWidth="1.5" strokeLinecap="round"/>
+                  </g>
+                  <text x="40" y="25" className="fill-current text-gray-400" fontSize="14" fontFamily="Arial, sans-serif" fontWeight="bold">Safaricom</text>
+                </svg>
               </div>
             </div>
           </div>
@@ -1020,39 +1206,180 @@ export function LandingPage() {
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-4">
               <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-                Simple Pricing
+                Pricing
               </span>
             </h3>
+            <p className="text-gray-400 text-lg">Choose the plan that fits your business needs</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass-card rounded-xl p-6 text-center border-2 border-green-500/50">
-              <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-sm font-semibold mb-4 inline-block">
-                Limited Time
+            {/* Starter Plan */}
+            <div className="glass-card rounded-xl p-6 text-center relative">
+              <div className="flex items-center justify-center space-x-2 mb-4">
+                <Zap className="h-5 w-5 text-blue-400" />
+                <h4 className="text-xl font-bold text-white">Starter</h4>
               </div>
-              <h4 className="text-xl font-bold text-white mb-2">Early Access</h4>
-              <div className="text-3xl font-bold text-green-400 mb-2">FREE</div>
-              <p className="text-gray-400 mb-4">while in beta</p>
-              <p className="text-sm text-gray-300 mb-6">Includes all features. Limited spots.</p>
+              <div className="text-3xl font-bold text-blue-400 mb-2">
+                KSh 2,000
+                <span className="text-sm font-normal text-gray-400">/month</span>
+              </div>
+              
+              {/* Features */}
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Up to 100 products</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Up to 500 customers</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Basic M-Pesa integration</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Sales reports</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Email support</span>
+                </div>
+              </div>
+              
+              {/* Usage Limits */}
+              <div className="pt-4 border-t border-gray-700 mb-6">
+                <h5 className="font-medium text-sm text-gray-300 mb-2">Usage Limits:</h5>
+                <div className="grid grid-cols-2 gap-2 text-xs text-gray-400">
+                  <div>Products: 100</div>
+                  <div>Customers: 500</div>
+                  <div>Transactions: 1,000</div>
+                  <div>Team Members: 1</div>
+                </div>
+              </div>
+              
+              <Button variant="outline" className="w-full border-gray-600 text-gray-300 hover:text-white hover:border-gray-400 py-2 rounded-lg">
+                Get Started
+              </Button>
+            </div>
+            
+            {/* Business Plan */}
+            <div className="glass-card rounded-xl p-6 text-center relative border-2 border-green-500/50">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  Most Popular
+                </div>
+              </div>
+              
+              <div className="flex items-center justify-center space-x-2 mb-4 mt-2">
+                <TrendingUp className="h-5 w-5 text-green-400" />
+                <h4 className="text-xl font-bold text-white">Business</h4>
+              </div>
+              <div className="text-3xl font-bold text-green-400 mb-2">
+                KSh 5,000
+                <span className="text-sm font-normal text-gray-400">/month</span>
+              </div>
+              
+              {/* Features */}
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Up to 1,000 products</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Up to 2,000 customers</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Advanced M-Pesa features</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Advanced analytics</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Team management (3 users)</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Priority support</span>
+                </div>
+              </div>
+              
+              {/* Usage Limits */}
+              <div className="pt-4 border-t border-gray-700 mb-6">
+                <h5 className="font-medium text-sm text-gray-300 mb-2">Usage Limits:</h5>
+                <div className="grid grid-cols-2 gap-2 text-xs text-gray-400">
+                  <div>Products: 1,000</div>
+                  <div>Customers: 2,000</div>
+                  <div>Transactions: 5,000</div>
+                  <div>Team Members: 3</div>
+                </div>
+              </div>
+              
               <Button className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white py-2 rounded-lg">
                 Get Started
               </Button>
             </div>
-            <div className="glass-card rounded-xl p-6 text-center">
-              <h4 className="text-xl font-bold text-white mb-2">Starter</h4>
-              <div className="text-3xl font-bold text-blue-400 mb-2">KES 500</div>
-              <p className="text-gray-400 mb-4">/month</p>
-              <p className="text-sm text-gray-300 mb-6">Automated bookkeeping, invoices, and reports</p>
+            
+            {/* Enterprise Plan */}
+            <div className="glass-card rounded-xl p-6 text-center relative">
+              <div className="flex items-center justify-center space-x-2 mb-4">
+                <Sparkles className="h-5 w-5 text-purple-400" />
+                <h4 className="text-xl font-bold text-white">Enterprise</h4>
+              </div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">
+                KSh 10,000
+                <span className="text-sm font-normal text-gray-400">/month</span>
+              </div>
+              
+              {/* Features */}
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Unlimited products</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Unlimited customers</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Full M-Pesa integration</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Advanced reporting</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Unlimited team members</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>24/7 phone support</span>
+                </div>
+                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <CheckCircle className="h-4 w-4 text-green-400" />
+                  <span>Custom integrations</span>
+                </div>
+              </div>
+              
+              {/* Usage Limits */}
+              <div className="pt-4 border-t border-gray-700 mb-6">
+                <h5 className="font-medium text-sm text-gray-300 mb-2">Usage Limits:</h5>
+                <div className="grid grid-cols-2 gap-2 text-xs text-gray-400">
+                  <div>Products: Unlimited</div>
+                  <div>Customers: Unlimited</div>
+                  <div>Transactions: Unlimited</div>
+                  <div>Team Members: Unlimited</div>
+                </div>
+              </div>
+              
               <Button variant="outline" className="w-full border-gray-600 text-gray-300 hover:text-white hover:border-gray-400 py-2 rounded-lg">
-                Coming Soon
-              </Button>
-            </div>
-            <div className="glass-card rounded-xl p-6 text-center">
-              <h4 className="text-xl font-bold text-white mb-2">Pro</h4>
-              <div className="text-3xl font-bold text-purple-400 mb-2">KES 1,200</div>
-              <p className="text-gray-400 mb-4">/month</p>
-              <p className="text-sm text-gray-300 mb-6">Everything in Starter + integrations & support</p>
-              <Button variant="outline" className="w-full border-gray-600 text-gray-300 hover:text-white hover:border-gray-400 py-2 rounded-lg">
-                Coming Soon
+                Contact Sales
               </Button>
             </div>
           </div>
@@ -1199,7 +1526,8 @@ export function LandingPage() {
       {/* Footer */}
       <footer className="border-t border-gray-800/50 bg-gray-950/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-8 text-center text-gray-400">
-          <p>&copy; 2024 Biashara Pro. Made with ❤️ for Kenyan businesses.</p>
+          <p>&copy; 2025 Biashara Pro. Made with ❤️ for Kenyan businesses.</p>
+          <p>All rights reserved. Developed by Amoni <Link href="https://www.linkedin.com/in/amoni-kevin/" className="text-blue-400 hover:text-blue-300 transition-colors">Kevin</Link></p>
         </div>
       </footer>
       </div>
