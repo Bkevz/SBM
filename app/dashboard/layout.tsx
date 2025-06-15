@@ -13,7 +13,7 @@ export default function DashboardLayout({
       <DashboardSidebar />
       <SidebarInset>
         <DashboardHeader />
-        <main className="flex-1 space-y-4 p-4 md:p-8 pt-6">{children}</main>
+        <main className="flex-1 space-y-4 p-4 md:p-8 pt-6 bg-background">{children}</main>
       </SidebarInset>
     </SidebarProvider>
   )

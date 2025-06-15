@@ -4,60 +4,80 @@
 
 @layer base {
   :root {
-    /* Light theme - matching the design's clean aesthetic */
-    --background: 0 0% 100%; /* FFFFFF - Clean white background */
-    --foreground: 0 0% 15%; /* 252525 - Dark text */
-    --card: 0 0% 100%; /* FFFFFF - White cards */
-    --card-foreground: 0 0% 15%; /* 252525 - Dark text on cards */
+    /* Light theme - Professional clean aesthetic */
+    --background: 0 0% 100%; /* FFFFFF - Pure white background */
+    --foreground: 0 0% 0%; /* 000000 - Pure black for big/small headers */
+    --card: 0 0% 93%; /* EDEDED - Light gray card background */
+    --card-foreground: 0 0% 0%; /* 000000 - Pure black text on cards */
     --popover: 0 0% 100%; /* FFFFFF - White popovers */
-    --popover-foreground: 0 0% 15%; /* 252525 - Dark text in popovers */
-    --primary: 194 59% 39%; /* 28809A - Teal/cyan primary color from design */
-    --primary-foreground: 0 0% 100%; /* FFFFFF - White text on primary */
-    --secondary: 0 0% 96%; /* F5F5F5 - Very light gray for secondary elements */
-    --secondary-foreground: 0 0% 15%; /* 252525 - Dark text on secondary */
-    --muted: 0 0% 96%; /* F5F5F5 - Light gray for muted backgrounds */
-    --muted-foreground: 0 0% 45%; /* 737373 - Medium gray for muted text */
+    --popover-foreground: 0 0% 0%; /* 000000 - Pure black text in popovers */
+    --primary: 194 59% 39%; /* 28809A - Teal primary for buttons */
+    --primary-foreground: 0 0% 0%; /* 000000 - Black text on primary buttons */
+    --secondary: 0 0% 93%; /* EDEDED - Light gray for secondary elements */
+    --secondary-foreground: 0 0% 0%; /* 000000 - Pure black text on secondary */
+    --muted: 0 0% 93%; /* EDEDED - Light gray for muted backgrounds */
+    --muted-foreground: 210 4% 57%; /* 8D9192 - Medium gray for medium headers */
     --accent: 194 59% 39%; /* 28809A - Same as primary for consistency */
-    --accent-foreground: 0 0% 100%; /* FFFFFF - White text on accent */
+    --accent-foreground: 0 0% 0%; /* 000000 - Black text on accent */
     --destructive: 0 84.2% 60.2%; /* Red for destructive actions */
     --destructive-foreground: 0 0% 100%; /* White text on destructive */
     --border: 0 0% 90%; /* E5E5E5 - Light border color */
     --input: 0 0% 100%; /* FFFFFF - White input backgrounds */
     --ring: 194 59% 39%; /* 28809A - Teal focus ring */
-    --radius: 0.75rem; /* Slightly more rounded corners like in design */
+    --radius: 0.75rem; /* Rounded corners */
     --chart-1: 194 59% 39%; /* 28809A - Primary teal */
     --chart-2: 194 59% 49%; /* Lighter teal */
     --chart-3: 194 59% 29%; /* Darker teal */
-    --chart-4: 0 0% 45%; /* 737373 - Gray */
-    --chart-5: 0 0% 15%; /* 252525 - Dark gray */
+    --chart-4: 210 4% 57%; /* 8D9192 - Medium gray */
+    --chart-5: 0 0% 0%; /* 000000 - Pure black */
+    
+    /* Sidebar specific variables */
+    --sidebar: 0 0% 0%; /* 000000 - Pure black sidebar background */
+    --sidebar-foreground: 0 0% 100%; /* FFFFFF - White text in sidebar */
+    --sidebar-primary: 194 59% 39%; /* 28809A - Teal for active states */
+    --sidebar-primary-foreground: 0 0% 100%; /* FFFFFF - White text on active */
+    --sidebar-accent: 0 0% 0%; /* 000000 - Black for hover start */
+    --sidebar-accent-foreground: 0 0% 100%; /* FFFFFF - White text on hover */
+    --sidebar-border: 0 0% 15%; /* 262626 - Dark border */
+    --sidebar-ring: 194 59% 39%; /* 28809A - Teal focus ring */
   }
 
   .dark {
-    /* Dark theme - matching the sidebar design */
-    --background: 0 0% 15%; /* 252525 - Dark background like sidebar */
+    /* Dark theme - Professional dark aesthetic */
+    --background: 0 0% 0%; /* 000000 - Pure black background */
     --foreground: 0 0% 100%; /* FFFFFF - White text */
-    --card: 0 0% 18%; /* 2D2D2D - Slightly lighter than background */
-    --card-foreground: 0 0% 100%; /* FFFFFF - White text on cards */
-    --popover: 0 0% 18%; /* 2D2D2D - Dark popovers */
+    --card: 0 0% 93%; /* EDEDED - Light gray cards (same as light theme) */
+    --card-foreground: 0 0% 0%; /* 000000 - Pure black text on cards */
+    --popover: 0 0% 0%; /* 000000 - Black popovers */
     --popover-foreground: 0 0% 100%; /* FFFFFF - White text in popovers */
-    --primary: 194 59% 39%; /* 28809A - Same teal primary */
-    --primary-foreground: 0 0% 100%; /* FFFFFF - White text on primary */
-    --secondary: 0 0% 25%; /* 404040 - Medium gray for secondary */
-    --secondary-foreground: 0 0% 100%; /* FFFFFF - White text on secondary */
-    --muted: 0 0% 25%; /* 404040 - Medium gray for muted backgrounds */
-    --muted-foreground: 0 0% 65%; /* A6A6A6 - Light gray for muted text */
-    --accent: 194 59% 39%; /* 28809A - Same teal accent */
-    --accent-foreground: 0 0% 100%; /* FFFFFF - White text on accent */
+    --primary: 194 59% 39%; /* 28809A - Teal primary for buttons */
+    --primary-foreground: 0 0% 0%; /* 000000 - Black text on primary buttons */
+    --secondary: 0 0% 93%; /* EDEDED - Light gray for secondary elements */
+    --secondary-foreground: 0 0% 0%; /* 000000 - Pure black text on secondary */
+    --muted: 0 0% 93%; /* EDEDED - Light gray for muted backgrounds */
+    --muted-foreground: 210 4% 57%; /* 8D9192 - Medium gray for medium headers */
+    --accent: 194 59% 39%; /* 28809A - Teal accent */
+    --accent-foreground: 0 0% 0%; /* 000000 - Black text on accent */
     --destructive: 0 62.8% 30.6%; /* Darker red for dark theme */
     --destructive-foreground: 0 0% 100%; /* White text on destructive */
     --border: 0 0% 25%; /* 404040 - Medium gray borders */
-    --input: 0 0% 18%; /* 2D2D2D - Dark input backgrounds */
+    --input: 0 0% 100%; /* FFFFFF - White input backgrounds */
     --ring: 194 59% 39%; /* 28809A - Teal focus ring */
     --chart-1: 194 59% 39%; /* 28809A - Primary teal */
     --chart-2: 194 59% 49%; /* Lighter teal */
     --chart-3: 194 59% 29%; /* Darker teal */
-    --chart-4: 0 0% 65%; /* A6A6A6 - Light gray */
+    --chart-4: 210 4% 57%; /* 8D9192 - Medium gray */
     --chart-5: 0 0% 100%; /* FFFFFF - White */
+    
+    /* Sidebar specific variables for dark theme */
+    --sidebar: 0 0% 0%; /* 000000 - Pure black sidebar background */
+    --sidebar-foreground: 0 0% 100%; /* FFFFFF - White text in sidebar */
+    --sidebar-primary: 194 59% 39%; /* 28809A - Teal for active states */
+    --sidebar-primary-foreground: 0 0% 100%; /* FFFFFF - White text on active */
+    --sidebar-accent: 0 0% 0%; /* 000000 - Black for hover start */
+    --sidebar-accent-foreground: 0 0% 100%; /* FFFFFF - White text on hover */
+    --sidebar-border: 0 0% 15%; /* 262626 - Dark border */
+    --sidebar-ring: 194 59% 39%; /* 28809A - Teal focus ring */
   }
 }
 
@@ -68,4 +88,35 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Custom text hierarchy classes */
+.text-header {
+  @apply text-black;
+}
+
+.text-medium {
+  color: hsl(210 4% 57%); /* #8D9192 */
+}
+
+/* Sidebar gradient hover effect */
+.sidebar-hover {
+  @apply transition-all duration-200 ease-in-out;
+  background: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(194 59% 39%) 100%);
+}
+
+.sidebar-hover:hover {
+  background: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(194 59% 39%) 100%);
+  opacity: 0.9;
+}
+
+/* Active sidebar item indicator */
+.sidebar-active {
+  @apply relative;
+  background: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(194 59% 39%) 100%);
+}
+
+.sidebar-active::before {
+  content: '';
+  @apply absolute left-0 top-0 bottom-0 w-1 bg-primary;
 }

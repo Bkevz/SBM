@@ -12,45 +12,57 @@ export function DashboardOverview() {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Revenue</CardTitle>
-            <CreditCard className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium text-medium">Total Revenue</CardTitle>
+            <CreditCard className="h-4 w-4 text-medium" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">KSh 45,231</div>
-            <p className="text-xs text-muted-foreground">+20.1% from last month</p>
+            <div className="text-2xl font-bold text-header">KSh 45,231</div>
+            <div className="flex items-center text-xs text-primary">
+            <TrendingUp className="h-3 w-3 mr-1" />
+            +12.5% from last month
+            </div>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Products</CardTitle>
-            <Package className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium text-medium">Products</CardTitle>
+            <Package className="h-4 w-4 text-medium" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">127</div>
-            <p className="text-xs text-muted-foreground">+5 new this week</p>
+            <div className="text-2xl font-bold text-header">127</div>
+            <div className="flex items-center text-xs text-primary">
+            <TrendingUp className="h-3 w-3 mr-1" />
+            +5 new this week
+            </div>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Customers</CardTitle>
-            <Users className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium text-medium">Customers</CardTitle>
+            <Users className="h-4 w-4 text-medium" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">89</div>
-            <p className="text-xs text-muted-foreground">+12 new this month</p>
+            <div className="text-2xl font-bold text-header">89</div>
+            <div className="flex items-center text-xs text-primary">
+            <TrendingUp className="h-3 w-3 mr-1" />
+            +12 new this month
+            </div>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Growth Rate</CardTitle>
-            <TrendingUp className="h-4 w-4 text-muted-foreground" />
+            <CardTitle className="text-sm font-medium text-medium">Growth Rate</CardTitle>
+            <TrendingUp className="h-4 w-4 text-medium" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">+12.5%</div>
-            <p className="text-xs text-muted-foreground">Monthly growth</p>
+            <div className="text-2xl font-bold text-header">+12.5%</div>
+            <div className="flex items-center text-xs text-primary">
+            <TrendingUp className="h-3 w-3 mr-1" />
+            Monthly growth
+            </div>
           </CardContent>
         </Card>
       </div>
@@ -59,8 +71,8 @@ export function DashboardOverview() {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
         <Card className="col-span-4">
           <CardHeader>
-            <CardTitle>Sales Overview</CardTitle>
-            <CardDescription>Your sales performance over the last 6 months</CardDescription>
+            <CardTitle className="text-header">Sales Overview</CardTitle>
+            <CardDescription className="text-medium">Your sales performance over the last 6 months</CardDescription>
           </CardHeader>
           <CardContent className="pl-2">
             <Overview />
@@ -69,8 +81,8 @@ export function DashboardOverview() {
 
         <Card className="col-span-3">
           <CardHeader>
-            <CardTitle>Recent Sales</CardTitle>
-            <CardDescription>Latest transactions from your business</CardDescription>
+            <CardTitle className="text-header">Recent Sales</CardTitle>
+            <CardDescription className="text-medium">Latest transactions from your business</CardDescription>
           </CardHeader>
           <CardContent>
             <RecentSales />

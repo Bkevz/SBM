@@ -27,6 +27,8 @@ import {
 import Link from "next/link"
 import { useAuth } from "@/components/auth/auth-provider"
 import { Button } from "@/components/ui/button"
+import { usePathname } from "next/navigation"
+import { cn } from "@/lib/utils"
 
 const menuItems = [
   {
@@ -78,47 +80,66 @@ const menuItems = [
 
 export function DashboardSidebar() {
   const { user, logout } = useAuth()
+  const pathname = usePathname()
 
   return (
-    <Sidebar>
-      <SidebarHeader>
-        <div className="flex items-center space-x-2 px-2">
+    <Sidebar className="bg-black border-r border-gray-800">
+      <SidebarHeader className="bg-black border-b border-gray-800">
+        <div className="flex items-center space-x-2 px-4 py-4">
           <Store className="h-8 w-8 text-primary" />
-          <span className="text-xl font-bold">Biashara Pro</span>
+          <span className="text-xl font-bold text-white">Biashara Pro</span>
         </div>
       </SidebarHeader>
 
-      <SidebarContent>
+      <SidebarContent className="bg-black">
         <SidebarGroup>
-          <SidebarGroupLabel>Navigation</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-white/70 px-4 py-2 text-xs uppercase tracking-wider">
+            Navigation
+          </SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenu>
-              {menuItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <Link href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+            <SidebarMenu className="space-y-1 px-2">
+              {menuItems.map((item) => {
+                const isActive = pathname === item.url
+                return (
+                  <SidebarMenuItem key={item.title}>
+                    <SidebarMenuButton asChild>
+                      <Link 
+                        href={item.url}
+                        className={cn(
+                          "flex items-center space-x-3 px-3 py-2 rounded-lg text-white transition-all duration-200 hover:bg-gradient-to-r hover:from-black hover:to-primary/20 relative",
+                          isActive && "sidebar-active bg-gradient-to-r from-black to-primary/30"
+                        )}
+                      >
+                        {isActive && (
+                          <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary rounded-r" />
+                        )}
+                        <item.icon className="h-5 w-5" />
+                        <span className="font-medium">{item.title}</span>
+                      </Link>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                )
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
 
-      <SidebarFooter>
-        <SidebarMenu>
+      <SidebarFooter className="bg-black border-t border-gray-800">
+        <SidebarMenu className="px-2">
           <SidebarMenuItem>
-            <div className="px-2 py-2">
-              <p className="text-sm font-medium">{user?.name}</p>
-              <p className="text-xs text-muted-foreground">{user?.email}</p>
+            <div className="px-3 py-3 border-b border-gray-800">
+              <p className="text-sm font-medium text-white">{user?.name}</p>
+              <p className="text-xs text-medium">{user?.email}</p>
             </div>
           </SidebarMenuItem>
           <SidebarMenuItem>
-            <Button variant="ghost" className="w-full justify-start" onClick={logout}>
-              <LogOut className="mr-2 h-4 w-4" />
+            <Button 
+              variant="ghost" 
+              className="w-full justify-start text-white hover:bg-gradient-to-r hover:from-black hover:to-primary/20 transition-all duration-200" 
+              onClick={logout}
+            >
+              <LogOut className="mr-3 h-4 w-4" />
               Sign Out
             </Button>
           </SidebarMenuItem>
