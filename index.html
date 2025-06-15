@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AutoBooks AI - Automate your small business accounting in Kenya." />
+  <title>AutoBooks AI - Smart Accounting for Kenyan SMBs</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #ffffff;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    header, section, footer {
+      padding: 40px 0;
+    }
+    .hero {
+      text-align: center;
+    }
+    .cta-button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .countdown {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #e63946;
+      margin-top: 10px;
+    }
+    .lead-form input, .lead-form button {
+      padding: 10px;
+      margin: 5px 0;
+      width: 100%;
+      max-width: 400px;
+      font-size: 1rem;
+    }
+    .lead-form button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    .social-proof, .features, .faq, .cta-final, .testimonials, .pricing, .product-visuals {
+      text-align: center;
+    }
+    .testimonial-item, .pricing-plan {
+      margin-bottom: 20px;
+    }
+    .product-visuals img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+
+  <div class="container">
+    <header class="hero">
+      <h1>AutoBooks AI</h1>
+      <h2>Say goodbye to manual bookkeeping. Automate your accounting, save hours weekly.</h2>
+      <p class="countdown" id="countdown-timer">Offer ends in: <span id="timer"></span></p>
+      <button class="cta-button">Get Early Access</button>
+    </header>
+
+    <section class="lead-form">
+      <h3>Join the Waitlist</h3>
+      <form id="signup-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <button type="submit">Join Now</button>
+      </form>
+    </section>
+
+    <section class="social-proof">
+      <h3>Loved by Kenyan SMBs</h3>
+      <p>Join 100+ early access users saving time and money every week.</p>
+    </section>
+
+    <section class="features">
+      <h3>Why AutoBooks AI?</h3>
+      <ul>
+        <li>⏱️ Real-time cash flow tracking</li>
+        <li>💼 Automated invoice generation</li>
+        <li>📊 Tax reports ready in 1 click</li>
+        <li>📱 Easy WhatsApp & Mpesa integration</li>
+      </ul>
+    </section>
+
+    <section class="product-visuals">
+      <h3>See It in Action</h3>
+      <img src="placeholder-hero.jpg" alt="Product dashboard screenshot" />
+    </section>
+
+    <section class="testimonials">
+      <h3>What Our Users Say</h3>
+      <div class="testimonial-item">
+        <p>"AutoBooks has saved me over 10 hours a week. It’s like having a virtual accountant!"</p>
+        <strong>- Grace, Nairobi boutique owner</strong>
+      </div>
+      <div class="testimonial-item">
+        <p>"Finally an affordable solution tailored for Kenyan businesses. I love the Mpesa integration!"</p>
+        <strong>- Peter, Freelance Developer</strong>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <h3>Simple Pricing</h3>
+      <div class="pricing-plan">
+        <h4>Early Access</h4>
+        <p><strong>FREE</strong> while in beta</p>
+        <p>Includes all features. Limited spots.</p>
+      </div>
+      <div class="pricing-plan">
+        <h4>Starter</h4>
+        <p>KES 500/month</p>
+        <p>Automated bookkeeping, invoices, and reports</p>
+      </div>
+      <div class="pricing-plan">
+        <h4>Pro</h4>
+        <p>KES 1200/month</p>
+        <p>Everything in Starter + integrations & support</p>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h3>FAQs</h3>
+      <p><strong>Is this for Kenyan businesses only?</strong><br>We’re focused on Kenya first, but global rollout is coming.</p>
+      <p><strong>What does it cost?</strong><br>Early access is free. Paid tiers launch later.</p>
+    </section>
+
+    <section class="cta-final">
+      <h2>Start Automating Your Books Today</h2>
+      <button class="cta-button">Join Waitlist Now</button>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 AutoBooks AI. Built for Kenyan entrepreneurs.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Countdown Timer
+    const countdownDate = new Date(Date.now() + 3 * 24 * 60 * 60 * 1000); // 3 days from now
+    const timerElement = document.getElementById('timer');
+
+    function updateCountdown() {
+      const now = new Date();
+      const distance = countdownDate - now;
+      if (distance <= 0) {
+        timerElement.innerHTML = "Offer ended";
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>

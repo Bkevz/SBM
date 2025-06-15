@@ -103,7 +103,7 @@ class EmailService:
                 <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
                 
                 <p style="font-size: 12px; color: #999; text-align: center;">
-                    © 2024 Biashara Pro. Made with ❤️ for Kenyan businesses.
+                    © 2025 Biashara Pro. Made with ❤️ for Kenyan businesses.
                 </p>
             </div>
         </body>
@@ -123,7 +123,7 @@ class EmailService:
         
         This invitation will expire in 7 days.
         
-        © 2024 Biashara Pro
+        © 2025 Biashara Pro
         """
         
         await self.send_email(to_email, subject, html_content, text_content)

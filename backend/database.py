@@ -10,15 +10,24 @@ load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL") or os.getenv("POSTGRES_URL")
 
 if not DATABASE_URL:
-    raise ValueError("DATABASE_URL or POSTGRES_URL environment variable is required")
+    # Fallback to SQLite for development
+    DATABASE_URL = "sqlite:///./test.db"
+    print("⚠️  Using SQLite for development. Set DATABASE_URL for production.")
 
-# Create engine with Neon-specific configuration
-engine = create_engine(
-    DATABASE_URL,
-    pool_pre_ping=True,  # Verify connections before use
-    pool_recycle=300,    # Recycle connections every 5 minutes
-    echo=False           # Set to True for SQL debugging
-)
+# Create engine with appropriate configuration
+if DATABASE_URL.startswith("sqlite"):
+    engine = create_engine(
+        DATABASE_URL,
+        connect_args={"check_same_thread": False},  # SQLite specific
+        echo=False
+    )
+else:
+    engine = create_engine(
+        DATABASE_URL,
+        pool_pre_ping=True,  # Verify connections before use
+        pool_recycle=300,    # Recycle connections every 5 minutes
+        echo=False           # Set to True for SQL debugging
+    )
 
 # Create SessionLocal class
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
@@ -37,10 +46,11 @@ def get_db():
 # Test database connection
 def test_connection():
     try:
+        from sqlalchemy import text
         with engine.connect() as conn:
-            conn.execute("SELECT 1")
-        print("✅ Neon database connected successfully!")
+            conn.execute(text("SELECT 1"))
+        print("✅ Database connected successfully!")
         return True
     except Exception as e:
-        print(f"❌ Neon database connection failed: {e}")
+        print(f"❌ Database connection failed: {e}")
         return False
